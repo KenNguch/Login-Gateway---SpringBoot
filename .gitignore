@@ -37,3 +37,8 @@ build/
 
 # Maven
 log/
+
+#Docker Unwanted Data
+./docker_data/sqlserver/.system
+./docker_data/sqlserver/secrets
+./docker_data/sqlserver/log
