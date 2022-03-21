@@ -11,4 +11,4 @@ services:
       ACCEPT_EULA: "Y"
       MSSQL_PID: "Express"
     volumes:
-      - ./docker_data/sqlserver:/var/opt/mssql
+      - ./external_resource/docker/sqlserver:/var/opt/mssql

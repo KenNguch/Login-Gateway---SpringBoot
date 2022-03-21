@@ -2,7 +2,7 @@ package manaal_ventures.com.model.response;
 
 public class UserResponseModel {
 
-    private String userId = "", firstName = "", lastName = "", email = "", phoneNumber = "", dateOfBirth = "1990-01-01", countryCode, responseMessage, ResponseCode;
+    private String userId = "", firstName = "", lastName = "", email = "", phoneNumber = "", dateOfBirth = "1990-01-01", countryCode = "", responseMessage = "", ResponseCode = "";
 
     public String getResponseMessage() {
         return responseMessage;

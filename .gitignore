@@ -39,6 +39,6 @@ build/
 log/
 
 #Docker Unwanted Data
-./docker_data/sqlserver/.system
-./docker_data/sqlserver/secrets
-./docker_data/sqlserver/log
+external_resource/docker/sqlserver/.system
+external_resource/docker/sqlserver/secrets
+external_resource/docker/sqlserver/log

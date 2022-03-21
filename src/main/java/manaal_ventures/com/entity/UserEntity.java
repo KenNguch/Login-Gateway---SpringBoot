@@ -15,31 +15,24 @@ public class UserEntity implements Serializable {
     @Id
     @GeneratedValue
     private long id;
-
     @Column(nullable = false)
     private String userId;
-
     @Column(nullable = false, length = 50, columnDefinition = "varchar(50) default ''")
     private String firstName;
     @Column(nullable = false, length = 50, columnDefinition = "varchar(50) default ''")
     private String lastName;
     @Column(nullable = false, length = 120, columnDefinition = "varchar(50) default ''")
     private String email;
-
     @Column(nullable = false, length = 20, columnDefinition = "varchar(50) default ''")
     private String phoneNumber;
-    @Column(nullable = false, length = 50, columnDefinition = "Date default '1990-01-01'")
-    private java.sql.Date dateOfBirth;
-
+    @Column(nullable = false, length = 50, columnDefinition = "varchar default '1990-01-01'")
+    private String dateOfBirth;
     @Column(nullable = false, length = 50, columnDefinition = "varchar(50) default ''")
-    private String country;
-
+    private String countryCode;
     @Column(nullable = false, length = 50, columnDefinition = "varchar(50) default ''")
     private String emailVerificationToken, encryptedPassword;
-
     @Column(nullable = false, columnDefinition = "bit default 0")
     private Boolean emailVerificationStatus;
-
     @Column(nullable = false, columnDefinition = "bit default 1")
     private Boolean isActive;
 
@@ -91,20 +84,20 @@ public class UserEntity implements Serializable {
         this.phoneNumber = phoneNumber;
     }
 
-    public java.sql.Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(java.sql.Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public String setDateOfBirth(String dateOfBirth) {
+        return this.dateOfBirth = dateOfBirth;
     }
 
-    public String getCountry() {
-        return country;
+    public String getCountryCode() {
+        return countryCode;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
+    public String setCountry(String country) {
+        return this.countryCode = countryCode;
     }
 
     public String getEmailVerificationToken() {

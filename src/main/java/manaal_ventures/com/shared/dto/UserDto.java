@@ -8,7 +8,8 @@ public class UserDto implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
     private long id;
-    private String firstName, lastName, email, password, phoneNumber, dateOfBirth, countryCode, emailVerificationToken;
+    private String firstName, lastName, email, password, phoneNumber, dateOfBirth, countryCode;
+    private String emailVerificationToken = "";
     private Boolean emailVerificationStatus = false, Active = false;
 
     public long getId() {
@@ -71,8 +72,8 @@ public class UserDto implements Serializable {
         return countryCode;
     }
 
-    public void setCountryCode(String countryCode) {
-        this.countryCode = countryCode;
+    public String setCountryCode(String countryCode) {
+        return this.countryCode = countryCode;
     }
 
     public String getEmailVerificationToken() {

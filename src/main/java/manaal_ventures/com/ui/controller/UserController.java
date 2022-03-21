@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/user")//http://localhost:8080/api/user/
+@RequestMapping("/users")//http://localhost:8080/api/v1/user/
 public class UserController {
 
     @Autowired

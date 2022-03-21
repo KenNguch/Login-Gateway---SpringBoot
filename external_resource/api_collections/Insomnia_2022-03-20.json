@@ -1,0 +1,129 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-03-20T18:58:22.385Z",
+  "__export_source": "insomnia.desktop.app:v2021.7.2",
+  "resources": [
+    {
+      "_id": "req_68af794f49344dd38d451053339db2e3",
+      "parentId": "fld_2864132cc5344a4d8c129483e12f251b",
+      "modified": 1647780840768,
+      "created": 1641924479482,
+      "url": "{{ _.BaseUrl }}/users",
+      "name": "get Users",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1641924479482,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_2864132cc5344a4d8c129483e12f251b",
+      "parentId": "wrk_894bf4d880694598add42a8a89e577fc",
+      "modified": 1647780823337,
+      "created": 1647780823337,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1647780823337,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_894bf4d880694598add42a8a89e577fc",
+      "parentId": null,
+      "modified": 1647780332444,
+      "created": 1641924475385,
+      "name": "Manaal Ventures Spring Application",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_d620fd332d9144b2adfb091e0fc5c552",
+      "parentId": "fld_2864132cc5344a4d8c129483e12f251b",
+      "modified": 1647784240375,
+      "created": 1647780851901,
+      "url": "{{ _.BaseUrl }}/users",
+      "name": "add Users",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n   \"firstName\":\"{% faker 'name', '', '', '', '', '', '', '', '', '', '', 'firstName', '', '', '', '', 'en' %}\",\n   \"countryCode\":\"{% faker 'address', 'countryCode', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'en' %}\",\n   \"lastName\":\"{% faker 'name', '', '', '', '', '', '', '', '', '', '', 'lastName', '', '', '', '', 'en' %}\",\n   \"email\":\"{% faker 'internet', '', '', '', '', '', '', '', '', 'email', '', '', '', '', '', '', 'en' %}\",\n   \"password\":\"{% faker 'internet', '', '', '', '', '', '', '', '', 'password', '', '', '', '', '', '', 'en' %}\",\n   \"phoneNumber\":\"{% faker 'phone', '', '', '', '', '', '', '', '', '', '', '', 'phoneNumber', '', '', '', 'en' %}\",\n   \"dateOfBirth\":\"{% now 'custom', 'YYYY-MM-DD' %}\",\n   \"countryCode\":\"+254\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_6b7c2f0477304afd92581f01349a80a9"
+        },
+        {
+          "id": "pair_74861a95043a47a7b762d5181c4d7b0a",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1639724483228.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_74f579535b9d239270c1ba72d546ce95ef4c15dd",
+      "parentId": "wrk_894bf4d880694598add42a8a89e577fc",
+      "modified": 1647780653699,
+      "created": 1641924475389,
+      "name": "Base Environment",
+      "data": {
+        "BaseUrl": "http://localhost:8000/api/v1"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "BaseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1641924475389,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_74f579535b9d239270c1ba72d546ce95ef4c15dd",
+      "parentId": "wrk_894bf4d880694598add42a8a89e577fc",
+      "modified": 1641924475391,
+      "created": 1641924475391,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_f7b4763593f4462cb3e9569341ec9bc2",
+      "parentId": "wrk_894bf4d880694598add42a8a89e577fc",
+      "modified": 1641924475386,
+      "created": 1641924475386,
+      "fileName": "My Collection",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
